@@ -8,5 +8,5 @@ int main_menu();
 
 int main()
 {
-	
+	welcome();
 }
