@@ -1,0 +1,6 @@
+const char *message1 = "Добро пожаловать!"
+const char *message2 = "Данная программа создана для проверки ваших знаний неправильных глаголов анлийского языка."
+const char *message3 = "Нажмите Н для начала или В для выхода"
+const char *message3 = "Текущий глагол - "
+const char *message4 = "Введите три формы глагола через Enter (Inf PS PP соответственно)"
+const char *message5 = "Ввод :"
