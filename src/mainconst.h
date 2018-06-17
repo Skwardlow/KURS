@@ -17,7 +17,7 @@ const char *Tab ="\n	";
 
 void welcome()
 {
-	printf(" %s%s%s%s%s%s", TabCaption, message1, Tab, message2, TabCaption, message3, Tab);
+	printf(" %s%s%s%s%s%s%s", TabCaption, message1, Tab, message2, TabCaption, message3, Tab);
 }
 
 int main_menu()

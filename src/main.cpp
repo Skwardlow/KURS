@@ -6,7 +6,8 @@ int main();
 int main()
 {	while (true)
 	{
-		while (int flag==1)
+                int flag = 1;
+		while (flag==1)
 		{
 			welcome();
 			if (getchar()==ESC) return 0;
@@ -15,11 +16,10 @@ int main()
 				flag=2;
 				system("cls");
 			}
-		}	
+		}
 		while (flag==2)
 		{
-			main_menu();
-			if (main_menu == 0) flag=1;
+			if (main_menu() == 0) flag=1;
 		}
 	}
 }

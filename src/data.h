@@ -5,13 +5,13 @@
 #include <cstdio>
 #include <cstring>
 
-typedef struct dictionary 
+typedef struct dictionary
 {
 	char *ru;
 	char *first_f;
 	char *second_f;
 	char *third_f;
-};
+} dictionary;
 
 dictionary *dic;
 int dic_size;
