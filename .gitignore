@@ -1,2 +1,7 @@
 *.exe
 src/*.exe
+*.gch
+prog*
+bin
+build
+.clang-format
