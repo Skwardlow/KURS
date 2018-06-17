@@ -1,9 +1,12 @@
 CC=g++
-CFLAGS=-Wall -Werror
+CFLAGS= #-Wall -Werror
 
 .PHONY: default clean
 
-default: bin/kurs
+default: bin/kurs bin/verbs
+
+bin/verbs: src/verbs
+	cp src/verbs bin/verbs
 
 bin/kurs: bin build/main.o
 	$(CC) $(CFLAGS) build/main.o -o bin/kurs
