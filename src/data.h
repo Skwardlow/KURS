@@ -97,4 +97,6 @@ void load_dictionary(char *file_path)
         dic[i].third_f[k] = '\0';
         i++;
     }
+}
 
+#endif
