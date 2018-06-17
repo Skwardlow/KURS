@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+#include <ctime>
 
 typedef struct dictionary
 {
@@ -23,6 +24,17 @@ int file_exists (char *name) {
     return (stat (name, &buffer) == 0);
 }
 
+int randomize_dic() {
+    srand(time(NULL));
+    dictionary d;
+    for (int i=0; i<10; i++) {
+        d = dic[i];
+        int j = rand()%dic_size;
+        dic[i]=dic[j];
+        dic[j] = d;
+    }
+}
+
 void load_dictionary(char *file_path)
 {
     if (!file_exists(file_path)) {
@@ -38,6 +50,10 @@ void load_dictionary(char *file_path)
     }
     fclose(file);
     dic_size--;
+    if (dic_size<=10) {
+        printf("Dictionary too small\n");
+        exit(1);
+    }
     dic = new dictionary[dic_size];
     int i=0, j=0, k=0;
     file = fopen(file_path, "r");

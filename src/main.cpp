@@ -18,12 +18,13 @@ int main()
 			if (ch=='S')
 			{
 				flag=2;
-				system("clear");
 			}
 		}
 		while (flag==2)
 		{
-			main_menu();
+			printf("Тестирование завершено. Правильных ответов: %d/10\n", main_menu());
+			scanf("%c", &ch);
+			return 0;
 		}
 	}
 }
