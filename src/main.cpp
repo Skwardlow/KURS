@@ -10,6 +10,7 @@ int main()
     while (true) {
         int flag = 1;
         while (flag == 1) {
+            system("clear");
             welcome();
             ch = getchar();
             if (ch == ESC)
