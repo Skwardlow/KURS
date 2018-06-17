@@ -4,4 +4,4 @@ src/*.exe
 prog*
 bin
 build
-
+.clang-format
