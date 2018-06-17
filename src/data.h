@@ -31,6 +31,7 @@ int randomize_dic()
     for (int i = 0; i < 10; i++) {
         d = dic[i];
         int j = rand() % dic_size;
+        if (j==i) j++;
         dic[i] = dic[j];
         dic[j] = d;
     }
