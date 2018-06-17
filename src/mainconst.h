@@ -3,17 +3,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const char *message1 = "Добро пожаловать!";\
-const char *message2 = "Данная программа создана для проверки ваших знаний неправильных глаголов анлийского языка.";
-const char *message3 = "Нажмите Н для начала или В для выхода";
-const char *message4 = "Текущий глагол - ";
-const char *message5 = "Введите три формы глагола через Enter (Inf PS PP соответственно)";
-const char *message6 = "Ввод :";
-const char *TabCaption ="\n									";
+const char *message1 = "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!";\
+const char *message2 = "Р”Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° СЃРѕР·РґР°РЅР°, С‡С‚РѕР±С‹ РїСЂРѕРІРµСЂРёС‚СЊ РІР°С€Рё Р·РЅР°РЅРёСЏ Р°РЅРіР»РёР№СЃРєРѕРіРѕ СЏР·С‹РєР°";
+const char *message3 = "РќР°Р¶РјРёС‚Рµ H РґР»СЏ РЅР°С‡Р°Р»Р° Рё Р’ РґР»СЏ РІС‹С…РѕРґР°";
+const char *message4 = "РўРµРєСѓС‰РёР№ РіР»Р°РіРѕР» - ";
+const char *message5 = "Р’РІРµРґРёС‚Рµ С‚СЂРё С„РѕСЂРјС‹ РіР»Р°РіРѕР»Р° С‡РµСЂРµР· Enter (Inf PS PP СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ)";
+const char *message6 = "Р’РІРѕРґ :";
+const char *TabCaption ="\n								";
 const char *Tab ="\n		"; 
 
 
-void welcome();
+void welcome()
+	{
+		printf(" %s%s%s%s%s%s", TabCaption, message1, Tab, message2, TabCaption, message3);
+	}
 
 
-#endif MAINCONST
+
+#endif
