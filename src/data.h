@@ -1,6 +1,8 @@
 #ifndef DATA_H
 #define DATA_H
 
+#include <sys/stat.h>
+#include <unistd.h>
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
@@ -16,8 +18,17 @@ typedef struct dictionary
 dictionary *dic;
 int dic_size;
 
+int file_exists (char *name) {
+    struct stat buffer;
+    return (stat (name, &buffer) == 0);
+}
+
 void load_dictionary(char *file_path)
 {
+    if (!file_exists(file_path)) {
+        printf("Dictionary file not found\n");
+        exit(1);
+    }
     char tmp[128];
     FILE *file = fopen(file_path, "r");
     while (!feof(file))
@@ -28,12 +39,10 @@ void load_dictionary(char *file_path)
     fclose(file);
     dic_size--;
     dic = new dictionary[dic_size];
-    printf("Size: %d\n", dic_size);
     int i=0, j=0, k=0;
     file = fopen(file_path, "r");
     while (!feof(file) && i<dic_size)
     {
-        printf("%d\n", i);
         j=0;
         fgets(tmp, 128, file);
         dic[i].ru = new char[32];

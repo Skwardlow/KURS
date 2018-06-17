@@ -4,22 +4,26 @@
 int main();
 
 int main()
-{	while (true)
+{
+	char ch;
+	load_dictionary("bin/verbs");
+	while (true)
 	{
                 int flag = 1;
 		while (flag==1)
 		{
 			welcome();
-			if (getchar()==ESC) return 0;
-			if (getchar()=='S') 
+			ch = getchar();
+			if (ch==ESC) return 0;
+			if (ch=='S')
 			{
 				flag=2;
-				system("cls");
+				system("clear");
 			}
 		}
 		while (flag==2)
 		{
-			if (main_menu() == 0) flag=1;
+			main_menu();
 		}
 	}
 }
